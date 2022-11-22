@@ -154,6 +154,7 @@ a:focus {
 
 .intro {
     display: flex;
+    flex-direction: row;
     width: 100%;
     height: auto;
     padding: 100px 0;
@@ -181,19 +182,26 @@ a:focus {
 }
 
 @media(min-width:768px) {
+    .intro-body {
+        width: 100%; height: 99%;
+        padding-left: 60px; text-align: center; 
+
+    }
     .intro {
         height: 100%;
-        padding: 0;
-    }
-
-    .intro .intro-body .brand-heading {
-        font-size: 70px;
-    }
-
-    .intro .intro-body .intro-text {
-        font-size: 26px;
     }
 }
+
+
+@media only screen and (max-device-width: 480px) {
+   /* styles for mobile browsers smaller than 480px; (iPhone) */
+   .intro{display: flex;
+        flex-direction: column;
+        width: 100%; height: 100%;
+    padding: 20px;}
+
+}
+
 
 .btn-circle {
     width: 70px;
@@ -293,6 +301,8 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
+        display: flex;
+        flex-direction: column;
         padding-top: 250px;
     }
 
@@ -340,9 +350,10 @@ ul.banner-social-buttons {
     }
 }
 
-@media(max-width:767px) {
+@media(max-width:200px) {
     ul.banner-social-buttons li {
-        display: block;
+        display: flex;
+        flex-direction: column;
         margin-bottom: 20px;
         padding: 0;
     }
